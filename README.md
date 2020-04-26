@@ -8,7 +8,7 @@
 - Store games points in file or LocalStorage
 
 ### Challanges
-- Create data with irregular verbs
-- Load from file
-- Create game engine
-- Simple UI for user
+- [ ] Create data with irregular verbs
+- [ ] Load from file
+- [ ] Create game engine
+- [ ] Simple UI for user
