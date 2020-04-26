@@ -15,3 +15,4 @@
 
 ### Run
 * Docker `docker-compose up -d` - hosted on `localhost:8080`
+* Stop `docker-compose stop`
