@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  node:
+    build: .
+    working_dir: /home/node/app
+    volumes: 
+        - .:/home/node/app  
+    expose:
+        - "8080"
+    ports:
+        - "8080:8080"    
+    command: "npx http-server ./src"    

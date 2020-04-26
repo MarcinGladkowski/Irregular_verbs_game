@@ -12,3 +12,6 @@
 - [ ] Load from file
 - [ ] Create game engine
 - [ ] Simple UI for user
+
+### Run
+* Docker `docker-compose up -d` - hosted on `localhost:8080`

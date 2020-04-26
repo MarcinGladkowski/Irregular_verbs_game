@@ -1,0 +1,22 @@
+{
+  "name": "irregular_verbs_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcinGladkowski/Irregular_verbs_game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcinGladkowski/Irregular_verbs_game/issues"
+  },
+  "homepage": "https://github.com/MarcinGladkowski/Irregular_verbs_game#readme",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
+}
