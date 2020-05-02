@@ -10,14 +10,13 @@ export default class Game {
     }
 
     loadQuestion() {
-        // get random data
         const verb = this.data[this.randomInt()]
 
         if (verb) {
-            // random form
-            let infinitive = this.getInfinitiveElement().value = verb.infinitive;
-            let past = this.getPastElement().value = verb.past;
-            let pastParticiple = this.getPastParticipleElement().value = verb.pastParticiple;
+            let { infinitive, past, pastParticiple } = verb;
+            this.getInfinitiveElement().value = infinitive;
+            this.getPastElement().value = past;
+            this.getPastParticipleElement().value = pastParticiple;
         }
     }
 
