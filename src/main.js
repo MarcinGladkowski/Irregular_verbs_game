@@ -1,5 +1,11 @@
 import Resource from './data.js';
 
-const resource = new Resource('https://iverb.huckbit.com/api/');
+const resource = new Resource('https://iverb.huckbit.com/api/all');
 
-resource.load();
+async function app() {
+    const data = await resource.load();
+
+    console.log(data);
+}
+
+app();
