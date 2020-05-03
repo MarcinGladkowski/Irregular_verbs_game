@@ -1,7 +1,8 @@
 export default class Game {
 
-    constructor() {
+    constructor(form) {
         this.actualQuestion = null;
+        this.form = form;
     }
 
     setData(data) {
@@ -22,15 +23,15 @@ export default class Game {
             let toShow = this.randomInt(3);
 
             const formElements = [
-                this.getInfinitiveElement(),
-                this.getPastElement(),
-                this.getPastParticipleElement()
+                this.form.getInfinitiveElement(),
+                this.form.getPastElement(),
+                this.form.getPastParticipleElement()
             ]
 
             // hide some options
-            this.getInfinitiveElement().value = infinitive;
-            this.getPastElement().value = past;
-            this.getPastParticipleElement().value = pastParticiple;
+            this.form.getInfinitiveElement().value = infinitive;
+            this.form.getPastElement().value = past;
+            this.form.getPastParticipleElement().value = pastParticiple;
 
             formElements.forEach((element, index) => {
                 if (index != toShow) {
@@ -45,13 +46,14 @@ export default class Game {
     }
 
     addClickListenerOnPlay() {
-        this.getPlayElement().addEventListener("click", () => {
+
+        this.form.getPlayElement().addEventListener("click", () => {
 
             // user answer
             const answer = {
-                infinitive: this.getInfinitiveElement().value,
-                past: this.getPastElement().value,
-                pastParticiple: this.getPastParticipleElement().value
+                infinitive: this.form.getInfinitiveElement().value,
+                past: this.form.getPastElement().value,
+                pastParticiple: this.form.getPastParticipleElement().value
             }
 
             if (
@@ -60,10 +62,9 @@ export default class Game {
                 || this.actualQuestion.pastParticiple !== answer.pastParticiple
             ) {
                 // show error box
+                // show erros on form
                 throw 'Invalid answer!';        
             }
-
-
 
             // valid answers
             // return result
@@ -71,19 +72,5 @@ export default class Game {
         })
     }
 
-    getInfinitiveElement() {
-        return document.querySelector('.infinitive');
-    }
-
-    getPastElement() {
-        return document.querySelector('.past');
-    }
-
-    getPastParticipleElement() {
-        return document.querySelector('.past-participle');
-    }
-
-    getPlayElement() {
-        return document.querySelector('.play');
-    }
+    
 }
